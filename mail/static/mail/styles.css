@@ -1,0 +1,80 @@
+textarea {
+    min-height: 400px;
+}
+
+.mail-header {
+    border-style: solid;
+    border: 10px black;
+    background-color: #b6dcf8;
+    border-radius: 15px 15px 0px 0px;
+    height: 100px;
+    padding: 10px;
+}
+
+.col-6 {
+    color:gray
+}
+
+.timestamp_col {
+    text-align: right;
+    font-size: x-small;
+}
+
+.mail-div {
+    background-color: white;
+    border-radius: 25px;
+    min-height: 200px;
+    height:auto;
+    padding-bottom: 20px;
+}
+
+.archive-btn:hover {
+    outline: 2px solid black;
+}
+
+.bg {
+    /* The image used */
+  background-color:ghostwhite;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#emails-view {
+    background-color: white;
+    border-radius: 25px;
+    min-height:70px;
+    padding: 20px;
+    height: auto;
+}
+
+nav {
+    border-radius: 20px;
+    background-color: white;
+}
+#submit-btn {
+    transition-duration: 0.2s;
+    background-color: #5bbaff;
+    border: #82c9ff;
+    color: white;
+}
+
+#submit-btn:hover {
+    background-color: rgb(58, 143, 255);
+}
+
+#reply-btn {
+    transition-duration: 0.2s;
+    background-color: #5bbaff;
+    border: none;
+}
+
+#reply-btn:hover {
+    background-color: rgb(58, 143, 255);
+}
+

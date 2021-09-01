@@ -1,0 +1,58 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <h2>Login</h2>
+
+    {% if message %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endif %}
+
+    <br><br><br>
+    <form action = "{% url 'login' %}" method = "post">
+        {% csrf_token %}
+        <div class = "container" style = "background-color:white; border-color: lightgray; border-radius: 25px; height:auto; width:300px; text-align: center; padding: 20px; margin: auto; box-shadow: 3px 3px #d4d4d4;">
+            <div class = "row">
+                <div class = "col">
+                        <img src = "{% static 'mail/mailIcon.png' %}" style = "width:80px; display:block;margin-left: auto;margin-right: auto;">
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col">
+                    <h3 class = "text-center">Log In</h3>
+                </div>
+            </div>
+            <div class = "row justify-content-center">
+                <div class = "col-10" style = "display: block; text-align: center; width:auto;">
+                    <div class="form-group">
+                        <input autofocus class="form-control" type="email" name="email" placeholder="Email" style = "width:200px;">
+                    </div>
+                </div>
+                
+            </div>
+            <div class = "row justify-content-md-center">
+                <div class = "col-10">
+                    <div class="form-group" style = "display: block; text-align: center; width:auto;">
+                        <input class="form-control" type="password" name="password" placeholder="Password" style = "width: 200px;">
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col">
+                    <input class="btn btn-primary" type="submit" value="Login">
+                </div>
+            </div>
+
+        </div>
+    </form>
+    <br>
+
+    <small>Don't have an account? <a style = "font-style:italic;" href="{% url 'register' %}">Register here.</a></small>
+
+{% endblock %}
